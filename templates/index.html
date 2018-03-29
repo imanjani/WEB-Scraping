@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Marvin the Martian</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mars Landing Page</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars</a></p>
+    </div>
+
+    <!-- Craigslist Listings -->
+    <div class="row" id="mars_landing_info">
+      <div class="col-md-12 col-xs-12"><h4>{{text}}</h4></div>
+      <div class="col-md-12 col-xs-12">
+        <h2 class="heading">{{mars_data.News_Title}}</h2></div>
+      <div class="col-md-12 col-xs-12"></div>
+      <div class="col-md-12 col-xs-12"><li><strong>{{mars_data.News_Paragraph}}</strong></li></div>
+      <div class="col-md-12 col-xs-12"><br></div>
+      <div class="col-md-6 col-xs-12"><div class="featured_image">
+        <img src= {{mars_data.Featured_Image}} alt="Mars featured image" 
+          height="450" width="450"></div></div>
+      <div class="col-md-1 col-xs-12"><br></div>
+      <div class="col-md-5 col-xs-12"> {{mars_data.Mars_Info|safe}} </div>
+      <div class="col-md-6 col-xs-12"><br></div>
+      <div class="col-md-1 col-xs-12"><br></div>
+      <div class="col-md-5 col-xs-12"><strong>Latest weather from @MarsWxReport: 
+        </strong> {{mars_data.Mars_Weather}}</div>
+
+      <div class="col-md-12 col-xs-12"><br></div>
+      <div class="col-md-12 col-xs-12" id="mars_hemispheres"><h2>Mars' Hemispheres</h2></div>
+      <div class="col-md-12 col-xs-12"><br></div>
+      <div class="col-md-6 col-sm-3 col-xs-12"><div class="featured_image"> {{mars_data.Hemisphere_Images[0]['title']}}
+        <img src= {{mars_data.Hemisphere_Images[0]['img_url']}} alt="Mars Hemisphere Images" 
+          height="450" width="450"></div></div>
+      <div class="col-md-6 col-sm-3 col-xs-12"><div class="featured_image"> {{mars_data.Hemisphere_Images[1]['title']}}
+        <img src= {{mars_data.Hemisphere_Images[1]['img_url']}} alt="Mars Hemisphere Images" 
+          height="450" width="450"></div></div>
+      <div class="col-md-6 col-sm-3 col-xs-12"><div class="featured_image"> {{mars_data.Hemisphere_Images[2]['title']}}
+        <img src= {{mars_data.Hemisphere_Images[2]['img_url']}} alt="Mars Hemisphere Images" 
+          height="450" width="450"></div></div>
+      <div class="col-md-6 col-sm-3 col-xs-12"><div class="featured_image"> {{mars_data.Hemisphere_Images[3]['title']}}
+        <img src= {{mars_data.Hemisphere_Images[3]['img_url']}} alt="Mars Hemisphere Images" 
+          height="450" width="450"></div></div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+<!-- mars_dict = {'News_Title': news_title, 'News_Paragraph': news_p, 'Featured_Image':
+featured_image_url, 'Mars_Weather': mars_weather, 'Mars_Info': table_html,
+'Hemisphere_Images': title_image_url} -->

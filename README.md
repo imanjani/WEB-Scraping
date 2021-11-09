@@ -1,4 +1,4 @@
-## Unit 13 | Assignment - Mars Landing
+## Mars Landing
 
 Skills Tested: MongoDB, Flask application, HTML, Webscraping (BeautifulSoup4, Splinter, Selenium, Twitter API/Search)
 
@@ -123,4 +123,4 @@ Use MongoDB with Flask templating to create a new HTML page that displays all of
 
 ## Copyright
 
-Coding Boot Camp © 2017. All Rights Reserved.
+Coding Boot Camp Â© 2017. All Rights Reserved.
